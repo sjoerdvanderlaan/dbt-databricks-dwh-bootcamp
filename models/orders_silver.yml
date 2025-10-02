@@ -1,0 +1,25 @@
+models:
+- name: orders_silver
+  description: This model filters and refines the orders data from the 'orders_bronze'
+    source. It ensures that only orders with a valid order key and those placed on
+    or after January 1, 1990, are included. This refined dataset is useful for analyzing
+    order trends and performance over time, starting from 1990.
+  columns:
+  - name: o_orderkey
+    description: A unique identifier for each order.
+  - name: o_order_date
+    description: The date when the order was placed, starting from January 1, 1990.
+  - name: o_custkey
+    description: A unique identifier for the customer who placed the order.
+  - name: o_orderstatus
+    description: The current status of the order.
+  - name: o_totalprice
+    description: The total price of the order.
+  - name: o_orderpriority
+    description: The priority level of the order.
+  - name: o_clerk
+    description: The clerk who processed the order.
+  - name: o_shippriority
+    description: The shipping priority of the order.
+  - name: o_comment
+    description: Additional comments or notes about the order.
