@@ -1,0 +1,14 @@
+models:
+- name: customer_silver
+  description: This model filters and refines customer data from the 'customer_bronze'
+    source, excluding customers with a null customer key or those from nation key
+    21. It provides a cleaned and focused dataset for further analysis or reporting.
+  columns:
+  - name: customer_id
+    description: A unique identifier for each customer.
+  - name: customer_name
+    description: The name of the customer.
+  - name: nation_key
+    description: The identifier for the customer's nation, excluding nation key 21.
+  - name: account_balance
+    description: The account balance of the customer, represented in decimal format.
